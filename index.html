@@ -3743,13 +3743,14 @@ const app = initializeApp(firebaseConfig);
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
 
-// Add a new document in collection "cities"
+/*/ Add a new document in collection "cities"
 await setDoc(doc(db, "bags", "LA"), {
   name: "Los Angeles",
   state: "CA",
   country: "USA"
 });
-
+*/
+  console.log(document.querySelector('.btn-action ion-icon bag-add-outline'));
   </script>
 
 </body>
