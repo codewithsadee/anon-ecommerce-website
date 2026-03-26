@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anon - eCommerce Website</title>
+  <meta name="description" content="Anon is your one-stop online shop for fashion, footwear, jewellery, cosmetics, and more. Discover the latest trends at unbeatable prices.">
 
   <!--
     - favicon
@@ -97,7 +98,7 @@
     <div class="toast-detail">
 
       <p class="toast-message">
-        Someone in new just bought
+        Someone just bought
       </p>
 
       <p class="toast-title">
@@ -204,16 +205,20 @@
 
         <div class="header-user-actions">
 
-          <button class="action-btn">
+          <button class="action-btn theme-toggle-btn" id="themeToggle" aria-label="Toggle dark mode">
+            <ion-icon name="moon-outline" id="themeIcon"></ion-icon>
+          </button>
+
+          <button class="action-btn" aria-label="My Account">
             <ion-icon name="person-outline"></ion-icon>
           </button>
 
-          <button class="action-btn">
+          <button class="action-btn" aria-label="Wishlist">
             <ion-icon name="heart-outline"></ion-icon>
             <span class="count">0</span>
           </button>
 
-          <button class="action-btn">
+          <button class="action-btn" aria-label="Shopping Bag">
             <ion-icon name="bag-handle-outline"></ion-icon>
             <span class="count">0</span>
           </button>
@@ -1584,7 +1589,7 @@
                     <div class="showcase-content">
                   
                       <a href="#">
-                        <h4 class="showcase-title">Girls pnk Embro design Top</h4>
+                        <h4 class="showcase-title">Girls Pink Embroidered Design Top</h4>
                       </a>
                   
                       <a href="#" class="showcase-category">Clothes</a>
@@ -1870,7 +1875,7 @@
                     <div class="showcase-content">
             
                       <a href="#">
-                        <h4 class="showcase-title">Air Trekking Shoes - white</h4>
+                        <h4 class="showcase-title">Air Trekking Shoes - White</h4>
                       </a>
             
                       <a href="#" class="showcase-category">Sports</a>
@@ -2095,13 +2100,13 @@
                   <div class="showcase">
             
                     <a href="#" class="showcase-img-box">
-                      <img src="./assets/images/products/watch-1.jpg" alt="smart watche vital plus" class="showcase-img" width="70">
+                      <img src="./assets/images/products/watch-1.jpg" alt="smart watch vital plus" class="showcase-img" width="70">
                     </a>
             
                     <div class="showcase-content">
             
                       <a href="#">
-                        <h4 class="showcase-title">Smart watche Vital Plus</h4>
+                        <h4 class="showcase-title">Smart Watch Vital Plus</h4>
                       </a>
             
                       <a href="#" class="showcase-category">Watches</a>
@@ -2206,8 +2211,7 @@
                     </a>
 
                     <p class="showcase-desc">
-                      Lorem ipsum dolor sit amet consectetur Lorem ipsum
-                      dolor dolor sit amet consectetur Lorem ipsum dolor
+                      Keep your skin fresh and hair healthy with this all-in-one shampoo, conditioner &amp; facewash bundle &mdash; great value for everyday care.
                     </p>
 
                     <div class="price-box">
@@ -2242,24 +2246,24 @@
 
                         <div class="countdown-content">
 
-                          <p class="display-number">360</p>
+                          <p class="display-number" id="deal1-days">--</p>
 
                           <p class="display-text">Days</p>
 
                         </div>
 
                         <div class="countdown-content">
-                          <p class="display-number">24</p>
+                          <p class="display-number" id="deal1-hours">--</p>
                           <p class="display-text">Hours</p>
                         </div>
 
                         <div class="countdown-content">
-                          <p class="display-number">59</p>
+                          <p class="display-number" id="deal1-mins">--</p>
                           <p class="display-text">Min</p>
                         </div>
 
                         <div class="countdown-content">
-                          <p class="display-number">00</p>
+                          <p class="display-number" id="deal1-secs">--</p>
                           <p class="display-text">Sec</p>
                         </div>
 
@@ -2278,7 +2282,7 @@
                 <div class="showcase">
               
                   <div class="showcase-banner">
-                    <img src="./assets/images/products/jewellery-1.jpg" alt="Rose Gold diamonds Earring" class="showcase-img">
+                    <img src="./assets/images/products/jewellery-1.jpg" alt="Rose Gold Diamonds Earring" class="showcase-img">
                   </div>
               
                   <div class="showcase-content">
@@ -2292,12 +2296,11 @@
                     </div>
               
                     <h3 class="showcase-title">
-                      <a href="#" class="showcase-title">Rose Gold diamonds Earring</a>
+                      <a href="#" class="showcase-title">Rose Gold Diamonds Earring</a>
                     </h3>
               
                     <p class="showcase-desc">
-                      Lorem ipsum dolor sit amet consectetur Lorem ipsum
-                      dolor dolor sit amet consectetur Lorem ipsum dolor
+                      Elegant rose gold earrings adorned with sparkling diamonds &mdash; perfect for any special occasion.
                     </p>
               
                     <div class="price-box">
@@ -2323,22 +2326,22 @@
               
                       <div class="countdown">
                         <div class="countdown-content">
-                          <p class="display-number">360</p>
+                          <p class="display-number" id="deal2-days">--</p>
                           <p class="display-text">Days</p>
                         </div>
               
                         <div class="countdown-content">
-                          <p class="display-number">24</p>
+                          <p class="display-number" id="deal2-hours">--</p>
                           <p class="display-text">Hours</p>
                         </div>
               
                         <div class="countdown-content">
-                          <p class="display-number">59</p>
+                          <p class="display-number" id="deal2-mins">--</p>
                           <p class="display-text">Min</p>
                         </div>
               
                         <div class="countdown-content">
-                          <p class="display-number">00</p>
+                          <p class="display-number" id="deal2-secs">--</p>
                           <p class="display-text">Sec</p>
                         </div>
                       </div>
@@ -2687,9 +2690,9 @@
               <div class="showcase">
               
                 <div class="showcase-banner">
-                  <img src="./assets/images/products/watch-1.jpg" alt="Smart watche Vital Plus" class="product-img default"
+                  <img src="./assets/images/products/watch-1.jpg" alt="Smart Watch Vital Plus" class="product-img default"
                     width="300">
-                  <img src="./assets/images/products/watch-2.jpg" alt="Smart watche Vital Plus" class="product-img hover" width="300">
+                  <img src="./assets/images/products/watch-2.jpg" alt="Smart Watch Vital Plus" class="product-img hover" width="300">
               
                   <div class="showcase-actions">
                     <button class="btn-action">
@@ -2714,7 +2717,7 @@
                   <a href="#" class="showcase-category">watches</a>
               
                   <h3>
-                    <a href="#" class="showcase-title">Smart watche Vital Plus</a>
+                    <a href="#" class="showcase-title">Smart Watch Vital Plus</a>
                   </h3>
               
                   <div class="showcase-rating">
@@ -3038,8 +3041,7 @@
               <img src="./assets/images/icons/quotes.svg" alt="quotation" class="quotation-img" width="26">
 
               <p class="testimonial-desc">
-                Lorem ipsum dolor sit amet consectetur Lorem ipsum
-                dolor dolor sit amet.
+                Shopping on Anon has been a fantastic experience. The quality of the products exceeded my expectations and delivery was super fast!
               </p>
 
             </div>
@@ -3350,14 +3352,14 @@
           <a href="#" class="footer-category-link">makeup kit</a>
           <a href="#" class="footer-category-link">liner</a>
           <a href="#" class="footer-category-link">lipstick</a>
-          <a href="#" class="footer-category-link">prefume</a>
+          <a href="#" class="footer-category-link">perfume</a>
           <a href="#" class="footer-category-link">Body soap</a>
           <a href="#" class="footer-category-link">scrub</a>
           <a href="#" class="footer-category-link">hair gel</a>
           <a href="#" class="footer-category-link">hair colors</a>
           <a href="#" class="footer-category-link">hair dye</a>
           <a href="#" class="footer-category-link">sunscreen</a>
-          <a href="#" class="footer-category-link">skin loson</a>
+          <a href="#" class="footer-category-link">skin lotion</a>
           <a href="#" class="footer-category-link">liner</a>
           <a href="#" class="footer-category-link">lipstick</a>
         </div>
@@ -3579,6 +3581,66 @@
 
 
 
+
+  <!-- PRODUCT QUICK-VIEW MODAL -->
+  <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-label="Product quick view">
+    <div class="product-modal-overlay" id="productModalOverlay"></div>
+    <div class="product-modal-content">
+      <button class="product-modal-close" id="productModalClose" aria-label="Close">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <div class="product-modal-img-box">
+        <img src="" alt="" id="modalImg" class="product-modal-img">
+      </div>
+      <div class="product-modal-info">
+        <p class="product-modal-category" id="modalCategory"></p>
+        <h2 class="product-modal-title" id="modalTitle"></h2>
+        <div class="product-modal-rating" id="modalRating"></div>
+        <div class="product-modal-price-box">
+          <p class="product-modal-price" id="modalPrice"></p>
+          <del class="product-modal-del" id="modalDel"></del>
+        </div>
+        <p class="product-modal-desc" id="modalDesc">A great product from our latest collection. High quality materials, comfortable fit, and stylish design.</p>
+        <div class="product-modal-actions">
+          <button class="product-modal-cart-btn" id="modalCartBtn">
+            <ion-icon name="bag-add-outline"></ion-icon> Add to Cart
+          </button>
+          <button class="product-modal-wish-btn" id="modalWishBtn" aria-label="Add to wishlist">
+            <ion-icon name="heart-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEARCH RESULTS DROPDOWN -->
+  <div class="search-dropdown" id="searchDropdown"></div>
+
+  <!-- THEME PANEL -->
+  <div class="theme-panel" id="themePanel">
+    <button class="theme-panel-toggle" id="themePanelToggle" aria-label="Open theme settings">
+      <ion-icon name="color-palette-outline"></ion-icon>
+    </button>
+    <div class="theme-panel-body">
+      <p class="theme-panel-title">Theme</p>
+      <div class="theme-mode-btns">
+        <button class="theme-mode-btn active" id="lightModeBtn" aria-label="Light mode">
+          <ion-icon name="sunny-outline"></ion-icon> Light
+        </button>
+        <button class="theme-mode-btn" id="darkModeBtn" aria-label="Dark mode">
+          <ion-icon name="moon-outline"></ion-icon> Dark
+        </button>
+      </div>
+      <p class="theme-panel-title">Accent Color</p>
+      <div class="theme-colors">
+        <button class="color-swatch active" data-color="pink" style="background:#ff7eb3" aria-label="Pink theme"></button>
+        <button class="color-swatch" data-color="blue" style="background:#4f8ef7" aria-label="Blue theme"></button>
+        <button class="color-swatch" data-color="green" style="background:#3dba7e" aria-label="Green theme"></button>
+        <button class="color-swatch" data-color="purple" style="background:#9b6dff" aria-label="Purple theme"></button>
+        <button class="color-swatch" data-color="orange" style="background:#ff8c42" aria-label="Orange theme"></button>
+      </div>
+    </div>
+  </div>
 
   <!--
     - custom js link
