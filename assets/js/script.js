@@ -86,3 +86,40 @@ for (let i = 0; i < accordionBtn.length; i++) {
   });
 
 }
+
+
+
+
+
+//  NEW FEATURE: Dark Mode 
+
+// dark mode variables
+const themeToggleButtons = document.querySelectorAll('[data-theme-toggle]');
+const savedTheme = localStorage.getItem('anon-theme');
+
+// dark mode function
+const updateThemeIcons = function (isDarkMode) {
+  const icons = document.querySelectorAll('.theme-icon');
+
+  for (let i = 0; i < icons.length; i++) {
+    icons[i].setAttribute('name', isDarkMode ? 'sunny-outline' : 'moon-outline');
+  }
+}
+
+// load saved dark mode setting
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark-mode');
+  updateThemeIcons(true);
+}
+
+// dark mode eventListener
+for (let i = 0; i < themeToggleButtons.length; i++) {
+
+  themeToggleButtons[i].addEventListener('click', function () {
+    const isDarkMode = document.body.classList.toggle('dark-mode');
+
+    localStorage.setItem('anon-theme', isDarkMode ? 'dark' : 'light');
+    updateThemeIcons(isDarkMode);
+  });
+
+}
